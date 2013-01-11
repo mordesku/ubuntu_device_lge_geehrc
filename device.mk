@@ -70,6 +70,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/lge/mako/kickstart_checker.sh:system/etc/kickstart_checker.sh
 
+PRODUCT_COPY_FILES += \
+	device/lge/mako/init_wlan.sh:system/etc/init_wlan.sh
+
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
 	device/lge/mako/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
