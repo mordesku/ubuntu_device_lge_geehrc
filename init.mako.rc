@@ -206,6 +206,10 @@ on post-fs-data
     # LED On/Off synchronization
     chown system system /sys/class/leds/red/device/lock
 
+    # backlight
+    chmod 0666 /sys/class/backlight/lm3530/brightness
+    chown system system /sys/class/backlight/lm3530/brightness
+
     # communicate with mpdecision and thermald
     mkdir /dev/socket/mpdecision 0770 system system
     chmod 2770 /dev/socket/mpdecision
