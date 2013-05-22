@@ -407,6 +407,16 @@ service init_wlan /system/bin/sh /system/etc/init_wlan.sh
 on property:init.svc.conn_init=stopped
     start init_wlan
 
+service unblock_wakelock /system/bin/sh /system/etc/unblock_wakelock.sh
+    class late_start
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:init.svc.sensorservice=running
+    start unblock_wakelock
+
 service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
     class main
     user bluetooth
