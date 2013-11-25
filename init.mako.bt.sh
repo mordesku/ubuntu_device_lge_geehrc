@@ -39,8 +39,6 @@ else
 BDADDR=`/system/bin/bdAddrLoader -p net.btdut.address -s -x`
 fi
 
-setprop bluetooth.status off
-
 logi "BDADDR: $BDADDR"
 
 case $POWER_CLASS in
@@ -65,12 +63,11 @@ fi
 case $? in
   0) logi "Bluetooth QSoC firmware download succeeded, $PWR_CLASS $BDADDR $TRANSPORT";;
   *) failed "Bluetooth QSoC firmware download failed" $?;
-     setprop bluetooth.status off;
      exit $?;;
 esac
 
-setprop bluetooth.status on
-
 logi "start bluetooth smd transport"
+
+echo 1 > /sys/module/hci_smd/parameters/hcismd_set
 
 exit 0
