@@ -399,6 +399,16 @@ service conn_init /system/bin/logwrapper /system/bin/conn_init
     group system wifi
     oneshot
 
+service init_wlan /system/bin/sh /system/etc/init_wlan.sh
+    class late_start
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:init.svc.conn_init=stopped
+    start init_wlan
+
 service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
     class main
     user bluetooth
