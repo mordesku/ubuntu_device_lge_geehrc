@@ -68,7 +68,8 @@ PRODUCT_COPY_FILES += \
 	device/lge/mako/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/mako/init_wlan.sh:system/etc/init_wlan.sh
+	device/lge/mako/init_wlan.sh:system/etc/init_wlan.sh \
+	device/lge/mako/unblock_wakelock.sh:system/etc/unblock_wakelock.sh
 
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
@@ -199,7 +200,8 @@ PRODUCT_COPY_FILES += \
 	device/lge/mako/init.mako.bt.sh:system/etc/init.mako.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.qualcomm.bt.hci_transport=smd
+	ro.qualcomm.bt.hci_transport=smd \
+	ro.qc.sensors.wl_dis=true
 
 PRODUCT_PACKAGES += \
 	camera.mako \
