@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
 	device/lge/mako/media_profiles.xml:system/etc/media_profiles.xml \
 	device/lge/mako/media_codecs.xml:system/etc/media_codecs.xml
 
+PRODUCT_COPY_FILES += \
+	device/lge/mako/init_wlan.sh:system/etc/init_wlan.sh
+
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
 	device/lge/mako/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
