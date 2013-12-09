@@ -262,4 +262,17 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
+# Copy over the prebuilt kernel and modules
+LOCAL_KERNEL := device/lge/mako-kernel/kernel
+
+PRODUCT_COPY_FILES += \
+       $(LOCAL_KERNEL):kernel
+
+LOCAL_KERNEL_MODULES := device/lge/mako-kernel/lib/modules
+
+MODULES := $(shell find $(LOCAL_KERNEL_MODULES))
+
+PRODUCT_COPY_FILES += \
+       $(foreach f, $(MODULES), $(f):$(subst $(LOCAL_KERNEL_MODULES),system/lib/modules,$(f)))
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
