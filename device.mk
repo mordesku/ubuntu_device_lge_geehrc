@@ -41,8 +41,8 @@ else
 LOCAL_KERNEL := device/lge/mako-kernel/kernel
 endif
 
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES := \
+#	$(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
 	device/lge/mako/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
