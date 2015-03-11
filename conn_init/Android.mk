@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter mako occam,$(TARGET_DEVICE)),)
+ifneq ($(filter geehrc occam,$(TARGET_DEVICE)),)
 
 LOCAL_PATH:= $(call my-dir)
 

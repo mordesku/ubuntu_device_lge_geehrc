@@ -14,6 +14,6 @@
 
 # Broadcom blob(s) necessary for Mako hardware
 PRODUCT_COPY_FILES := \
-    vendor/broadcom/mako/proprietary/bcm2079x_firmware.ncd:system/vendor/firmware/bcm2079x_firmware.ncd:broadcom \
-    vendor/broadcom/mako/proprietary/bcm2079x_pre_firmware.ncd:system/vendor/firmware/bcm2079x_pre_firmware.ncd:broadcom \
+    vendor/broadcom/geehrc/proprietary/bcm2079x_firmware.ncd:system/vendor/firmware/bcm2079x_firmware.ncd:broadcom \
+    vendor/broadcom/geehrc/proprietary/bcm2079x_pre_firmware.ncd:system/vendor/firmware/bcm2079x_pre_firmware.ncd:broadcom \
 

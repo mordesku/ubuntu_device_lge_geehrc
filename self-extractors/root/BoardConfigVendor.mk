@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := mako/BoardConfigPartial.mk
+LOCAL_STEM := geehrc/BoardConfigPartial.mk
 
 -include vendor/broadcom/$(LOCAL_STEM)
 -include vendor/lge/$(LOCAL_STEM)
